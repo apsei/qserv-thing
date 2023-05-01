@@ -19,6 +19,24 @@ header {
   font-weight: bold;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+
+nav a {
+  color: #333;
+  font-size: 18px; /* Увеличьте размер шрифта */
+  text-decoration: none;
+  margin: 0 10px; /* Добавьте отступы между пунктами меню */
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -45,22 +63,71 @@ h2 {
 }
 
 .hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
   text-align: center;
-  background-color: #a1c9f1;
+  animation: fade-in 1.5s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
   color: #ffffff;
 }
 
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
+.hero-content p {
   font-size: 24px;
+  color: #ffffff;
 }
 
 .button {

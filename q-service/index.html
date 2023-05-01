@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
     <script src="js/slider.js" defer></script>
     <title>Q-service</title>
   </head>
 
   <body>
     <header>
-      <div class="logo">Логотип</div>
+      <div class="logo">Q-service</div>
       <nav>
         <ul>
           <li><a href="#">Главная</a></li>
@@ -25,9 +28,14 @@
     </header>
 
     <section class="hero">
-      <h1>Добро пожаловать в Q-service!</h1>
-      <p>Мы предлагаем качественный сервис и профессиональный ремонт</p>
-      <a href="services.html" class="button">Узнать больше</a>
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="/video/video-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-content">
+        <h1>Добро пожаловать в Q-service!</h1>
+        <p>Мы предлагаем качественный сервис и профессиональный ремонт</p>
+        <a href="services.html" class="button">Узнать больше</a>
+      </div>
     </section>
 
     <section class="services">
@@ -70,7 +78,10 @@
 
     <section class="promotions">
       <h2>Акции и предложения</h2>
-      <div class="promotion-card" style="background-image: url('img/promotion-pic1.jpg')">
+      <div
+        class="promotion-card"
+        style="background-image: url('img/promotion-pic1.jpg')"
+      >
         <div class="promotion-content">
           <h3>Скидка 20% на обслуживание ПО</h3>
           <p>
@@ -80,7 +91,10 @@
           <a href="#" class="button">Узнать больше</a>
         </div>
       </div>
-      <div class="promotion-card" style="background-image: url('img/promotion-pic2.jpg')">
+      <div
+        class="promotion-card"
+        style="background-image: url('img/promotion-pic2.jpg')"
+      >
         <div class="promotion-content">
           <h3>Бесплатная диагностика</h3>
           <p>
@@ -96,7 +110,11 @@
       <h2>Отзывы клиентов</h2>
       <div class="slider">
         <div class="slide active">
-          <img src="https://via.placeholder.com/100" alt="Аватар клиента" class="avatar">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Аватар клиента"
+            class="avatar"
+          />
           <div class="stars" data-rating="5">
             <span class="star"></span>
             <span class="star"></span>
@@ -104,11 +122,18 @@
             <span class="star"></span>
             <span class="star"></span>
           </div>
-          <p>Замечательный сервис! Ребята быстро и качественно починили мой компьютер. Больше не нужно беспокоиться о технических проблемах.</p>
+          <p>
+            Замечательный сервис! Ребята быстро и качественно починили мой
+            компьютер. Больше не нужно беспокоиться о технических проблемах.
+          </p>
           <span>Владислав</span>
         </div>
         <div class="slide">
-          <img src="https://via.placeholder.com/100" alt="Аватар клиента" class="avatar">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Аватар клиента"
+            class="avatar"
+          />
           <div class="stars" data-rating="4">
             <span class="star"></span>
             <span class="star"></span>
@@ -116,11 +141,18 @@
             <span class="star"></span>
             <span class="star"></span>
           </div>
-          <p>Хороший сервис. Они профессионально отнеслись к моим требованиям, и мой компьютер работает намного быстрее. Отличная работа!</p>
+          <p>
+            Хороший сервис. Они профессионально отнеслись к моим требованиям, и
+            мой компьютер работает намного быстрее. Отличная работа!
+          </p>
           <span>Александр</span>
         </div>
         <div class="slide">
-          <img src="https://via.placeholder.com/100" alt="Аватар клиента" class="avatar">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Аватар клиента"
+            class="avatar"
+          />
           <div class="stars" data-rating="5">
             <span class="star"></span>
             <span class="star"></span>
@@ -128,7 +160,10 @@
             <span class="star"></span>
             <span class="star"></span>
           </div>
-          <p>Я очень доволен этим сервисом. Быстрый ремонт и отличное обслуживание клиентов. Рекомендую всем своим друзьям и коллегам.</p>
+          <p>
+            Я очень доволен этим сервисом. Быстрый ремонт и отличное
+            обслуживание клиентов. Рекомендую всем своим друзьям и коллегам.
+          </p>
           <span>Константин</span>
         </div>
         <button class="prev-slide">Назад</button>
@@ -146,10 +181,34 @@
       </div>
       <div class="social-links">
         <h4>Следуйте за нами:</h4>
-        <a href="https://vk.com/q-service" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-vk"></i></a>
-        <a href="https://www.instagram.com/q-service" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.twitter.com/q-service" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-twitter"></i></a>
-        <a href="https://t.me/q-service" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+        <a
+          href="https://vk.com/q-service"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          ><i class="fab fa-vk"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/q-service"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.twitter.com/q-service"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://t.me/q-service"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          ><i class="fab fa-telegram-plane"></i
+        ></a>
       </div>
       <div class="copyright">&copy; 2023 Q-service. Все права защищены.</div>
     </footer>
