@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   background-color: #f7f9fc;
 }
 
+/* header */
 header {
   display: flex;
   justify-content: space-between;
@@ -15,10 +17,11 @@ header {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }
 
+/* Навигация */
 nav {
   display: flex;
   justify-content: space-around;
@@ -28,13 +31,13 @@ nav {
 
 nav a {
   color: #333;
-  font-size: 18px; /* Увеличьте размер шрифта */
+  font-size: 24px;
   text-decoration: none;
-  margin: 0 10px; /* Добавьте отступы между пунктами меню */
+  margin: 0 10px;
 }
 
 nav a:hover {
-  color: #007BFF;
+  color: #007bff;
 }
 
 nav ul {
@@ -58,10 +61,12 @@ nav ul li a:hover {
   color: #5f9cd5;
 }
 
+/* Заголовки */
 h2 {
   display: block;
 }
 
+/* Hero-секция */
 .hero {
   position: relative;
   height: 100vh;
@@ -130,6 +135,7 @@ h2 {
   color: #ffffff;
 }
 
+/* Кнопки */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -144,105 +150,94 @@ h2 {
   background-color: #2c3e50;
 }
 
+/* Услуги */
 .services,
 .promotions,
 .testimonials {
   padding: 50px;
 }
 
-.services h2 {
+.services .services-header {
+  position: relative;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.services .services-header h2 {
+  display: block;
+  padding: 5px 20px;
+  z-index: 1;
+  position: relative;
 }
 
 .service-cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
-  background-color: #ffffff;
-}
-
-.contact-info,
-.social-links {
-  margin: 20px;
-}
-
-.contact-info h4,
-.social-links h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0 0 10px;
-}
-
-.social-links .social-link {
-  display: inline-block;
-  font-size: 24px;
-  color: #333;
-  margin: 0 5px;
-  transition: color 0.3s;
-}
-
-.social-links .social-link:hover {
-  color: #007BFF;
-}
-
-.copyright {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #333;
-  width: 100%;
-  text-align: center;
-}
-
-.services {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
 .service-card {
-  width: 300px;
-  padding: 20px;
+  position: relative;
+  width: calc(100% / 4 - 30px);
+  margin: 0 15px 20px;
   text-align: center;
+  overflow: hidden;
   background-color: #ffffff;
   border-radius: 5px;
-  margin-bottom: 30px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.service-card .icon {
-  font-size: 48px;
-  margin-bottom: 15px;
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .service-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .service-card p {
-  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
 }
 
+/* Адаптивность */
+@media screen and (max-width: 1200px) {
+  .service-card {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+/* Спецпредложения */
 .promotions {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  text-align: center;
+}
+
+.promotions h2 {
+  margin-bottom: 30px;
 }
 
 .promotion-card {
+  display: inline-block;
   width: 48%;
   height: 300px;
   background-size: cover;
@@ -250,6 +245,8 @@ footer {
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+  vertical-align: top;
+  margin-bottom: 20px;
 }
 
 .promotion-content {
@@ -273,18 +270,42 @@ footer {
   margin-bottom: 20px;
 }
 
+/* Отзывы */
 .testimonials {
   text-align: center;
   padding: 20px;
 }
 
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
 .slider {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
 .slide {
   display: none;
+  position: relative;
 }
 
 .slide.active {
@@ -293,9 +314,6 @@ footer {
 
 .prev-slide,
 .next-slide {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background-color: #2c3e50;
   color: #ffffff;
   padding: 10px 15px;
@@ -311,14 +329,6 @@ footer {
   opacity: 1;
 }
 
-.prev-slide {
-  left: -50px;
-}
-
-.next-slide {
-  right: -50px;
-}
-
 .slide p {
   font-size: 1.1em;
   line-height: 1.5;
@@ -326,19 +336,32 @@ footer {
 }
 
 .slide span {
+  display: block;
   font-size: 1em;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+.slide img.avatar {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+.slide p {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .stars {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
@@ -359,6 +382,179 @@ footer {
 .star.full {
   background-image: url("/img/star-icon.svg");
 }
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.social-links {
+  margin: 20px;
+}
+
+.contact-info h4,
+.social-links h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.social-links h4 {
+  display: block;
+}
+
+.social-links .social-link {
+  display: inline-block;
+  font-size: 24px;
+  color: #333;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.social-links .social-link:hover {
+  color: #007bff;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  order: 3;
+}
+
+/* hero-услуг */
+
+.services-hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 75vh;
+}
+
+.services-slides {
+  display: flex;
+  transition: transform 1s;
+}
+
+.services-slide {
+  min-width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.services-bg {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.services-info {
+  position: relative;
+  z-index: 2;
+  left: 0;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  width: 100%;
+  color: #ffffff;
+}
+
+.services-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.services-description {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.services-button {
+  padding: 12px 24px;
+  background-color: #5f9cd5;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.services-button:hover {
+  background-color: #2c3e50;
+}
+
+
+/* Адаптивность */
+@media (max-width: 767px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+  }
+
+  nav a {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+}
+
+/* Десктопы */
+@media (min-width: 1024px) {
+  .logo {
+    font-size: 30px;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 24px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .slider {
@@ -383,7 +579,7 @@ footer {
     top: 50%;
   }
 }
-/* Адаптивность для секции "promotions" */
+/* Адаптивность карточек */
 @media (max-width: 768px) {
   .promotion-card {
     width: 100%;
@@ -391,51 +587,52 @@ footer {
   }
 }
 
-/* Адаптивность для секции "services" */
+/* Адаптивность секции услуг */
 @media (max-width: 768px) {
-  .service-card {
+  .services {
+    flex-direction: column;
+  }
+
+  .service-box {
     width: 100%;
     margin-bottom: 15px;
   }
 }
 
-/* Адаптивность footer*/
+/* Адаптивность секции отзывов */
 @media (max-width: 768px) {
-  .contact-info,
-  .social-links {
-    margin: 20px 0;
-    text-align: center;
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial-box {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
 
-/* Адаптивность */
+/* Адаптивность footer */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .hero {
-    height: 80vh;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
   footer {
     flex-direction: column;
+  }
+
+  .contact-info,
+  .social-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-info h4,
+  .social-links h4 {
+    text-align: center;
+  }
+
+  .contact-info p {
+    text-align: center;
+  }
+
+  .social-links .social-link {
+    margin: 0 10px;
   }
 }
