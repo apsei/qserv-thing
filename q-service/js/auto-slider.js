@@ -12,4 +12,4 @@ function changeSlide() {
   servicesSlidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-setInterval(changeSlide, 5000); // Изменение слайдов каждые 5 секунд
+setInterval(changeSlide, 5000); 
