@@ -9,7 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
     />
-    <title>Корзина</title>
+    <script src="js/slider.js" defer></script>
+    <title>Q-service</title>
   </head>
 
   <body>
@@ -17,168 +18,28 @@
       <div class="logo">Q-service</div>
       <nav>
         <ul>
-          <li><a href="#">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="services.html">Услуги</a></li>
-          <li><a href="prices.html">Корзина</a></li>
+          <li><a href="#">Корзина</a></li>
           <li><a href="about.html">О компании</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
-      <video autoplay loop muted playsinline class="hero-video">
-        <source src="video/video-bg.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-content">
-        <h1>Добро пожаловать в Q-service!</h1>
-        <p>Мы предлагаем качественный сервис и профессиональный ремонт</p>
-        <a href="services.html" class="button">Узнать больше</a>
-      </div>
+    <section class="cart-hero">
+      <!-- добавить сюда описание и принцип действия. текст должен быть приветлив и понятен пользователю. -->
     </section>
 
-    <section class="services">
-      <div class="services-header">
-        <h2>Наши услуги</h2>
-      </div>
-      <div class="service-cards">
-        <div class="service-card">
-          <img src="img/diagnostics.jpg" alt="Диагностика и ремонт" />
-          <h3>Диагностика и ремонт компьютеров</h3>
-          <p>
-            Выявление и устранение аппаратных и программных проблем в
-            компьютерах и ноутбуках.
-          </p>
-        </div>
-        <div class="service-card">
-          <img src="img/POnastr.jpg" alt="Обслуживание и настройка ПО" />
-          <h3>Обслуживание и настройка ПО</h3>
-          <p>
-            Установка, обновление и оптимизация операционных систем и
-            программного обеспечения.
-          </p>
-        </div>
-        <div class="service-card">
-          <img src="img/virusi.jpg" alt="Удаление вирусов и восстановление данных" />
-          <h3>Удаление вирусов и восстановление данных</h3>
-          <p>
-            Обнаружение и удаление вредоносного ПО, а также восстановление
-            поврежденных или потерянных данных.
-          </p>
-        </div>
-        <div class="service-card">
-          <img src="img/upgrade.jpg" alt="Апгрейд и модернизация компьютеров" />
-          <h3>Апгрейд и модернизация компьютеров</h3>
-          <p>
-            Улучшение производительности и функциональности компьютеров путем
-            замены или добавления компонентов.
-          </p>
-        </div>
-      </div>
+    <section class="cart">
+      <!-- интерфейс и функциональность корзины должна быть реализована здесь -->
     </section>
-
-    <section class="promotions">
-      <h2>Акции и предложения</h2>
-      <div
-        class="promotion-card"
-        style="background-image: url('img/promotion-pic1.jpg')"
-      >
-        <div class="promotion-content">
-          <h3>Скидка 20% на обслуживание ПО</h3>
-          <p>
-            Получите скидку 20% на обслуживание программного обеспечения при
-            заказе до конца месяца.
-          </p>
-          <a href="#" class="button">Узнать больше</a>
-        </div>
-      </div>
-      <div
-        class="promotion-card"
-        style="background-image: url('img/promotion-pic2.jpg')"
-      >
-        <div class="promotion-content">
-          <h3>Бесплатная диагностика</h3>
-          <p>
-            Забронируйте время для бесплатной диагностики вашего компьютера или
-            ноутбука.
-          </p>
-          <a href="#" class="button">Забронировать</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <h2>Отзывы клиентов</h2>
-      <div class="slider">
-        <div class="slide active">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Аватар клиента"
-            class="avatar"
-          />
-          <div class="stars" data-rating="5">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-          </div>
-          <p>
-            Замечательный сервис! Ребята быстро и качественно починили мой
-            компьютер. Больше не нужно беспокоиться о технических проблемах.
-          </p>
-          <span>Владислав</span>
-        </div>
-        <div class="slide">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Аватар клиента"
-            class="avatar"
-          />
-          <div class="stars" data-rating="4">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-          </div>
-          <p>
-            Хороший сервис. Они профессионально отнеслись к моим требованиям, и
-            мой компьютер работает намного быстрее. Отличная работа!
-          </p>
-          <span>Александр</span>
-        </div>
-        <div class="slide">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Аватар клиента"
-            class="avatar"
-          />
-          <div class="stars" data-rating="5">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-          </div>
-          <p>
-            Я очень доволен этим сервисом. Быстрый ремонт и отличное
-            обслуживание клиентов. Рекомендую всем своим друзьям и коллегам.
-          </p>
-          <span>Константин</span>
-        </div>
-        <div class="slider-controls">
-          <button class="prev-slide">Назад</button>
-          <button class="next-slide">Вперед</button>
-        </div>
-      </div>
-    </section>
-
+    
     <footer>
       <div class="contact-info">
         <h4>Контактная информация</h4>
         <p>Адрес: ул. Димитрова, 47, г. Воронеж, Россия</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Телефон: +7 (727) 228-14-88</p>
         <p>Email: info@q-service.com</p>
         <p>Часы работы: Пн-Пт 9:00-18:00</p>
       </div>
