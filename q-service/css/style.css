@@ -345,6 +345,8 @@ h2 {
 
 .slide img.avatar {
   display: block;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 50px;
@@ -637,6 +639,8 @@ footer {
 }
 
 .service-dropdown-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: space-between;
