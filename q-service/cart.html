@@ -28,13 +28,31 @@
     </header>
 
     <section class="cart-hero">
-      <!-- добавить сюда описание и принцип действия. текст должен быть приветлив и понятен пользователю. -->
+      <div class="cart-hero-content">
+        <h1>Ваша корзина</h1>
+        <p>
+          Здесь вы можете просмотреть выбранные услуги, изменить количество или
+          удалить ненужные позиции. Когда будете готовы, нажмите "Оформить
+          заказ", чтобы перейти к следующему шагу.
+        </p>
+      </div>
     </section>
 
     <section class="cart">
-      <!-- интерфейс и функциональность корзины должна быть реализована здесь -->
+      <div class="cart-content">
+        <ul class="cart-items">
+          <!-- Позиции корзины будут генерироваться здесь с помощью JavaScript -->
+        </ul>
+        <div class="cart-total">
+          <span>Итого: </span>
+          <span class="total-price"
+            ><!-- Общая стоимость будет отображаться здесь --></span
+          >
+        </div>
+        <button class="checkout-button">Оформить заказ</button>
+      </div>
     </section>
-    
+
     <footer>
       <div class="contact-info">
         <h4>Контактная информация</h4>
@@ -76,5 +94,7 @@
       </div>
       <div class="copyright">&copy; 2023 Q-service. Все права защищены.</div>
     </footer>
+    
+    <script src="js/cart.js"></script>
   </body>
 </html>

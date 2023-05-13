@@ -97,6 +97,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ]
   };
 
+  function addToCart(service) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(service);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
   function updateServiceDetails(service, category) {
     let modal = document.querySelector(`.modal[data-modal=${category}]`);
     let title = modal.querySelector('.modal-service-title');
@@ -104,6 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     title.textContent = service.name;
     description.textContent = service.description;
+
+    let addToCartButton = modal.querySelector('.add-to-cart');
+    addToCartButton.setAttribute('data-service', JSON.stringify(service));
   }
 
   function updateServicesList(category) {
@@ -152,6 +161,35 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.close').forEach((button) => {
     button.addEventListener('click', function () {
       this.parentNode.parentNode.style.display = 'none';
+    });
+  });
+
+  let toast = document.getElementById("toast");
+  let toastTimeout;
+
+  function showToast() {
+    clearTimeout(toastTimeout);
+    toast.classList.add("show");
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  }
+
+  toast.addEventListener('mouseenter', function () {
+    clearTimeout(toastTimeout);
+  });
+
+  toast.addEventListener('mouseleave', function () {
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  });
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+      let service = JSON.parse(this.getAttribute('data-service'));
+      addToCart(service);
+      showToast();
     });
   });
 });
