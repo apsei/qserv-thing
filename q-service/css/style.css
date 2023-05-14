@@ -765,8 +765,8 @@ footer {
 .delete-button {
   margin-left: 10px;
   padding: 5px 10px;
-  background-color: #f44336; /* Красный цвет */
-  color: #ffffff; /* Белый цвет текста */
+  background-color: #f44336; 
+  color: #ffffff; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -774,7 +774,7 @@ footer {
 }
 
 .delete-button:hover {
-  background-color: #d32f2f; /* Темно-красный цвет при наведении */
+  background-color: #d32f2f; 
 }
 
 
