@@ -808,6 +808,103 @@ footer {
   font-size: 12px;
 }
 
+.cart-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); 
+  animation: fadeIn 0.5s;
+}
+
+.cart-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation: slideDown 0.5s;
+}
+
+/* Стили для формы */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {top: -300px; opacity: 0;}
+  to {top: 0; opacity: 1;}
+}
+
+#checkoutForm fieldset {
+  margin-bottom: 20px;
+}
+
+#checkoutForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#checkoutForm input[type="text"],
+#checkoutForm input[type="email"],
+#checkoutForm input[type="tel"] {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#checkoutForm input[type="submit"] {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s;
+}
+
+#checkoutForm input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#checkoutForm input[type="submit"]:active {
+  background-color: #2e6d31;
+}
+
+@media screen and (max-width: 600px) {
+  .cart-modal-content {
+    width: 95%;
+  }
+}
+
+
 /* Адаптивность */
 
 @media (min-width: 768px) {

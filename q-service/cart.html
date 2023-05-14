@@ -52,6 +52,64 @@
         <button class="checkout-button">Оформить заказ</button>
       </div>
     </section>
+    <div id="checkoutModal" class="cart-modal">
+      <div class="cart-modal-content">
+        <span class="close">&times;</span>
+        <h2>Оформление заказа</h2>
+        <form action="/submit-order" method="POST" id="checkoutForm">
+          <fieldset>
+            <legend>Ваши данные</legend>
+            <label for="customerName">Имя:</label>
+            <input type="text" id="customerName" name="customerName" required />
+            <label for="customerEmail">Email:</label>
+            <input
+              type="email"
+              id="customerEmail"
+              name="customerEmail"
+              required
+            />
+            <label for="customerPhone">Телефон:</label>
+            <input
+              type="tel"
+              id="customerPhone"
+              name="customerPhone"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Адрес доставки</legend>
+            <label for="deliveryAddress">Адрес:</label>
+            <input
+              type="text"
+              id="deliveryAddress"
+              name="deliveryAddress"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Метод оплаты</legend>
+            <label>
+              <input
+                type="radio"
+                name="paymentMethod"
+                value="creditCard"
+                checked
+              />
+              Онлайн-оплата
+            </label>
+            <label>
+              <input type="radio" name="paymentMethod" value="cashOnDelivery" />
+              Оплата при получении
+            </label>
+          </fieldset>
+          <div class="policy">
+            Нажимая "Оформить заказ", вы соглашаетесь с нашей
+            <a href="privacy-policy.html">политикой конфиденциальности</a>.
+          </div>
+          <input type="submit" value="Оформить заказ" />
+        </form>
+      </div>
+    </div>
 
     <footer>
       <div class="contact-info">
