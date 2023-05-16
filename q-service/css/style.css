@@ -898,6 +898,127 @@ footer {
   background-color: #2e6d31;
 }
 
+/* about */
+
+.about-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background: url('/img/about-bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.about-hero-content {
+  text-align: center;
+  color: #fff; 
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.about-hero-content h1 {
+  font-size: 2.5em;
+}
+
+.about-hero-content p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about-hero-content {
+  animation: slideIn 0.75s ease-in;
+}
+
+.about-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #f7f7f7; 
+}
+
+.about-company h2 {
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+.about-company ul {
+  list-style-type: none; 
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.about-company ul li {
+  flex-basis: 45%; 
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+  position: relative; 
+  cursor: pointer;
+}
+
+.about-company ul li::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url('/path/to/your/icon.png');
+  background-size: cover;
+}
+
+.about-company ul li {
+  display: flex;
+  align-items: center;
+}
+
+.about-company ul li i {
+  margin-right: 10px;
+  color: #007bff; /* Синий цвет для иконок */
+}
+
+.about-history {
+  padding: 90px 0;
+}
+
+.about-history h2 {
+  font-size: 3em;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.about-history p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding: 30px 120px 10px 120px;
+}
+
+
+
 @media screen and (max-width: 600px) {
   .cart-modal-content {
     width: 95%;
